@@ -1,0 +1,84 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-05-14 20:17+0530\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: myshop/settings.py:127
+msgid "Marathi"
+msgstr ""
+
+#: myshop/settings.py:128
+msgid "English"
+msgstr ""
+
+#: shop/models.py:7 shop/models.py:25
+msgid "name"
+msgstr ""
+
+#: shop/models.py:8 shop/models.py:26
+msgid "slug"
+msgstr ""
+
+#: shop/models.py:12 shop/models.py:24
+msgid "category"
+msgstr ""
+
+#: shop/models.py:13
+msgid "categories"
+msgstr "श्रेणी"
+
+#: shop/models.py:27
+msgid "description"
+msgstr "वर्णन"
+
+
+msgid "Toothpaste"
+msgstr "टूथपेस्ट"
+
+#: shop/models.py:28
+msgid "price"
+msgstr "किंमत"
+
+#: shop/models.py:29
+msgid "available"
+msgstr "उपलब्ध"
+
+#: shop/templates/shop/base.html:6
+msgid "Indian Shop"
+msgstr "भारतीय दुकान"
+
+#: shop/templates/shop/base.html:12
+msgid "Apni Dukaan"
+msgstr "स्वतःचे दुकान"
+
+#: shop/templates/shop/base.html:16
+msgid "Your Cart is Empty."
+msgstr "आपली कार्ट रिक्त आहे"
+
+#: shop/templates/shop/product/detail.html:8
+msgid "welcome"
+msgstr "स्वागत आहे"
+
+#: shop/templates/shop/product/product_list.html:5
+msgid "Products"
+msgstr "उत्पादने"
+
+#: shop/templates/shop/product/product_list.html:13
+msgid "All"
+msgstr "सर्व"
+
