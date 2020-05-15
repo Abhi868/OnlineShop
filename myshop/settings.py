@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/2.0/ref/settings/
 from django.conf import settings
 import os
 from django.utils.translation import gettext_lazy as _
+import dj_database_url
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -26,7 +27,7 @@ SECRET_KEY = 'fmhkkoses)l*9y%&0r02d8+767p^#gv_vpo+$&l2&+w1vkdrbu'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1' ,'herokuapp.com']
 
 
 # Application definition
@@ -44,6 +45,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -78,10 +80,18 @@ WSGI_APPLICATION = 'myshop.wsgi.application'
 # https://docs.djangoproject.com/en/2.0/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
+    'default':{
+         'ENGINE':'django.db.backends.postgresql',
+         'NAME': os.environ.get('DB'),
+         'USER':os.environ.get('NAME'), 
+         'PASSWORD':os.environ.get('PASSWORD')
+     
+     }
+
+   # 'default': {
+   #     'ENGINE': 'django.db.backends.sqlite3',
+   #     'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+   # }
 }
 
 
@@ -136,7 +146,19 @@ USE_TZ = True
 #)
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
 #LANGUAGE_CODE = 'mr'
+
+
+
+PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
+
+#############static file settings ################
+STATIC_ROOT = os.path.join(PROJECT_ROOT, 'staticfiles')
 STATIC_URL = '/static/'
+#STATICFILES_DIRS = (
+#    os.path.join(PROJECT_ROOT, 'static'),
+#)
+#STATICFILES_STORAGE = 'whitenoise.django.CompressedManifestStaticFilesStorage'
+###########Media file settings#######################
 MEDIA_URL='/media/'
 MEDIA_ROOT=os.path.join(BASE_DIR , 'media/')
 CART_SESSION_ID='cart'
